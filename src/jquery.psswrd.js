@@ -6,10 +6,11 @@
       	var $input					= $(this);
   			var $checkbox 			= $($input.data('typetoggle'));
   			
-  			// Bind onchange events to the checkboxes
-  			$checkbox.change(function() {
+  			$checkbox.change(updateType);
+  			updateType();
+  			function updateType() {
   				$input[0].type = $checkbox.is(':checked') ? 'text' : 'password';
-  			});
+  			}
       });
     }
   }); 
