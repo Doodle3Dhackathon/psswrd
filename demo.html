@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Psswrd demo</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="src/jquery.psswrd.js" type="text/javascript"></script>
+	<script>
+	$(function () {
+		var passwordField = $("input[type=password]");
+		console.log("  passwordField: ",passwordField);
+		passwordField.psswrd();
+	});
+	</script>
+</head>
+<body>
+	<form data-ajax="false" data-target="#connecting_to_network">
+		<input type="password" name="password" placeholder="Password" data-typetoggle='#showPassword' autocomplete="off" autofocus>
+		<input id="showPassword" type="checkbox" value="showPassword">
+		<label for="showPassword" class="inline">show password</label>
+		<input type=submit value="Connect">
+	</form>
+</body>
+</html>
